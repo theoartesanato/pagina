@@ -8,8 +8,8 @@
 <channel>
 	<title>
 	Comentários sobre: Olá, mundo!	</title>
-	<atom:link href="/index.php/2022/07/11/ola-mundo/feed/" rel="self" type="application/rss+xml" />
-	<link>/index.php/2022/07/11/ola-mundo/</link>
+	<atom:link href="https://theoartes.com/index.php/2022/07/11/ola-mundo/feed/" rel="self" type="application/rss+xml" />
+	<link>https://theoartes.com/index.php/2022/07/11/ola-mundo/</link>
 	<description>Domine o único método capaz de fazer mais dinheiro com artesanato.</description>
 	<lastBuildDate>Mon, 11 Jul 2022 14:40:25 +0000</lastBuildDate>
 	<sy:updatePeriod>
@@ -20,11 +20,11 @@
 	<item>
 		<title>
 		Por: Um comentarista do WordPress		</title>
-		<link>/index.php/2022/07/11/ola-mundo/#comment-1</link>
+		<link>https://theoartes.com/index.php/2022/07/11/ola-mundo/#comment-1</link>
 
 		<dc:creator><![CDATA[Um comentarista do WordPress]]></dc:creator>
 		<pubDate>Mon, 11 Jul 2022 14:40:25 +0000</pubDate>
-		<guid isPermaLink="false">/?p=1#comment-1</guid>
+		<guid isPermaLink="false">https://theoartes.com/?p=1#comment-1</guid>
 
 					<description><![CDATA[Oi, isto é um comentário.
 Para iniciar a moderar, editar e excluir comentários, visite a tela Comentários no painel.
