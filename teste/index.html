@@ -1,41 +1,42 @@
-<video muted autoplay playsinline loop class="video">
-        <source src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4" type="video/mp4" size="1080">
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Custom Controls with Plyr.io Video Player</title>
+  <link rel='stylesheet' href='https://cdn.plyr.io/3.5.6/plyr.css'>
 
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<video 
+       controls
+            crossorigin
+            
+            playsinline
+            data-poster="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.jpg" class="js-player">
+  <!-- Video files -->
+            <source
+              src="https://vjs.zencdn.net/v/oceans.mp4"
+              type="video/mp4"
+              size="576"
+            />
+            <source
+              src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+              type="video/mp4"
+              size="720"
+            />
+            <source
+              src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+              type="video/mp4"
+              size="1080"
+            />
 
- Your browser does not support the video tag.
+    
+
 </video>
+<!-- partial -->
+  <script src='https://cdn.plyr.io/3.5.6/plyr.js'></script><script  src="./script.js"></script>
 
-<script src="https://cdn.plyr.io/3.7.2/plyr.js"></script>
+</body>
+</html>
 
-<script>
- document.addEventListener('DOMContentLoaded', () => {
-   const controls = [
-     'mute',
-   ];
-   const player = Plyr.setup('.video', { controls, muted: true  });
- });
-</script>
-
-<style>
- video {
-   position: fixed;
-   left: 0;
-   right: 0;
-   top: 0;
-   bottom: 0;
-   width: 100%;
-   height: 100%;
-   -webkit-object-fit: cover;
-   -moz-object-fit: cover;
-   -ms-object-fit: cover;
-   object-fit: cover;
- }
- .plyr__control svg {
-  width: 40px;
-   height: 40px;
-   margin-right: 10px;
- }
- .plyr__control span {
-  display: none;
- }
-</style>
