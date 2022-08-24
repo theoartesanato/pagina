@@ -1,21 +1,26 @@
+
+
 <!DOCTYPE html>
 <html lang="en" >
-<head>
-  <meta charset="UTF-8">
-  <title>vid</title>
-<style>
 
+<head>
+
+  <meta charset="UTF-8">
+
+
+
+  <title>CodePen - Play YouTube Video When a Preview Image Is Clicked or Tapped on Mobile</title>
+  
+  
+  
+  
+<style>
 body { margin: 0; }
 
-  .video {
-  background: #000;
+.video {
+  width: 100%;
+  height: 100%;
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -99;
-
 }
 
 .video-layer {
@@ -28,7 +33,6 @@ body { margin: 0; }
   z-index: 9;
   transition: opacity 0.8s ease-in-out;
 }
-
 .playing .video-layer {
   opacity: 1;
 }
@@ -54,22 +58,15 @@ body { margin: 0; }
   width: 100%;
   height: 80px;
   margin-top: -40px;
-  z-index: 100;
 }
-
 </style>
 
 
+
 </head>
-<body>
 
-
-
-  <div class="video-background">
-  <div class="video-foreground">
-
-
-
+<body translate="no" >
+  <div class="page">
   
   <div class="video" data-video-id="CoL8Gtvxfl0">
     <div class="video-layer">
@@ -82,23 +79,17 @@ body { margin: 0; }
       <svg viewBox="0 0 74 74">
         <circle style="opacity:0.64;stroke:#fff" cx="37" cy="37" r="36.5"></circle>
         <circle fill="none" stroke="#fff" cx="37" cy="37" r="36.5"></circle>
-        <polygon fill="#ff66ff" points="33,22 33,52 48,37"></polygon>
+        <polygon fill="#333" points="33,22 33,52 48,37"></polygon>
       </svg>
     </div>
   </div>
   
 </div>
 
-  </div>
-  </div>
 
-
-</body>
-</html>
-
-
-<script>
-  // Load the YouTube IFrame Player API code asynchronously.
+  
+      <script id="rendered-js" >
+// Load the YouTube IFrame Player API code asynchronously.
 // https://developers.google.com/youtube/iframe_api_reference
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
@@ -111,9 +102,9 @@ window.onYouTubeIframeAPIReady = function () {
   // for Internet Explorer 11 and below, convert array-like NodeList to an actual Array.
   videoModules = Array.prototype.slice.call(videoModules);
   videoModules.forEach(initializeVideoModule);
-}
+};
 
-function initializeVideoModule(videoModule){
+function initializeVideoModule(videoModule) {
   var player = new YT.Player(videoModule.querySelector('.video-placeholder'), {
     videoId: videoModule.dataset.videoId,
     events: {
@@ -124,15 +115,23 @@ function initializeVideoModule(videoModule){
         // videoModule.classList.toggle('playing', !isEnded);
         videoModule.classList[isEnded ? 'remove' : 'add']('playing');
         // if the video is done playing, remove it and re-initialize
-        if(isEnded){
+        if (isEnded) {
           player.destroy();
-          videoModule.querySelector('.video-layer').innerHTML = (
-            '<div class="video-placeholder"></div>'
-          );
+          videoModule.querySelector('.video-layer').innerHTML =
+          '<div class="video-placeholder"></div>';
+
           initializeVideoModule(videoModule);
         }
-      }
-    }
-  });
+      } } });
+
+
 }
-</script>
+
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
