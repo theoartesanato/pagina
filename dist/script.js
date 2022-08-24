@@ -11,9 +11,9 @@ window.onYouTubeIframeAPIReady = function () {
   // for Internet Explorer 11 and below, convert array-like NodeList to an actual Array.
   videoModules = Array.prototype.slice.call(videoModules);
   videoModules.forEach(initializeVideoModule);
-}
+};
 
-function initializeVideoModule(videoModule){
+function initializeVideoModule(videoModule) {
   var player = new YT.Player(videoModule.querySelector('.video-placeholder'), {
     videoId: videoModule.dataset.videoId,
     events: {
@@ -24,14 +24,14 @@ function initializeVideoModule(videoModule){
         // videoModule.classList.toggle('playing', !isEnded);
         videoModule.classList[isEnded ? 'remove' : 'add']('playing');
         // if the video is done playing, remove it and re-initialize
-        if(isEnded){
+        if (isEnded) {
           player.destroy();
-          videoModule.querySelector('.video-layer').innerHTML = (
-            '<div class="video-placeholder"></div>'
-          );
+          videoModule.querySelector('.video-layer').innerHTML =
+          '<div class="video-placeholder"></div>';
+
           initializeVideoModule(videoModule);
         }
-      }
-    }
-  });
+      } } });
+
+
 }

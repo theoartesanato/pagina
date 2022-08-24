@@ -1,97 +1,14 @@
-
-
 <!DOCTYPE html>
 <html lang="en" >
-
 <head>
-
   <meta charset="UTF-8">
-
-
-
-  <title>CodePen - Play YouTube Video When a Preview Image Is Clicked or Tapped on Mobile</title>
-  
-  
-  
-  
-<style>
-body { margin: 0; }
-
-.video {
-  background: #000;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-}
-
-.video-layer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 9;
-  transition: opacity 0.8s ease-in-out;
-}
-
-.video-layer iframe {
-  width: 100%;
-  height: 100%;
-}
-
-@media (min-aspect-ratio: 16/9) {
-  .video-layer {
-    height: 300%;
-    top: -100%;
-  }
-}
-@media (max-aspect-ratio: 16/9) {
-  .video-layer {
-    width: 300%;
-    left: -100%;
-  }
-}
-
-.playing .video-layer {
-  opacity: 1;
-}
-
-
-
-.video-preview {
-  width: 100%;
-  height: 100%;
-  background: url("https://img.youtube.com/vi/CoL8Gtvxfl0/0.jpg") 50% 50% no-repeat;
-  background-size: cover;
-  transition: opacity 0.8s ease-in-out;
-}
-.playing .video-preview {
-  opacity: 0;
-}
-.video-preview svg {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  height: 80px;
-  margin-top: -40px;
-
-
-}
-</style>
-
-
+  <title>CodePen - A Pen by rick</title>
+  <link rel="stylesheet" href="./style.css">
 
 </head>
-
-<body translate="no" >
-  <div class="page">
-  
-  <div class="video" data-video-id="CoL8Gtvxfl0">
+<body>
+<!-- partial:index.partial.html -->
+<div class="video" data-video-id="CoL8Gtvxfl0">
     <div class="video-layer">
       <div class="video-placeholder">
         <!-- ^ div is replaced by the YouTube video -->
@@ -106,55 +23,8 @@ body { margin: 0; }
       </svg>
     </div>
   </div>
-  
-</div>
-
-
-  
-      <script id="rendered-js" >
-// Load the YouTube IFrame Player API code asynchronously.
-// https://developers.google.com/youtube/iframe_api_reference
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-document.body.appendChild(tag);
-
-// When the YouTube API code loads, it calls this function, so it must be global
-// and it must be named exactly onYouTubeIframeAPIReady.
-window.onYouTubeIframeAPIReady = function () {
-  var videoModules = document.querySelectorAll('.video');
-  // for Internet Explorer 11 and below, convert array-like NodeList to an actual Array.
-  videoModules = Array.prototype.slice.call(videoModules);
-  videoModules.forEach(initializeVideoModule);
-};
-
-function initializeVideoModule(videoModule) {
-  var player = new YT.Player(videoModule.querySelector('.video-placeholder'), {
-    videoId: videoModule.dataset.videoId,
-    events: {
-      onStateChange: function (event) {
-        var isEnded = event.data === YT.PlayerState.ENDED;
-        // 'playing' css class controls fading the video and preivew images in/out.
-        // Internet Explorer 11 and below do not support a second argument to `toggle`
-        // videoModule.classList.toggle('playing', !isEnded);
-        videoModule.classList[isEnded ? 'remove' : 'add']('playing');
-        // if the video is done playing, remove it and re-initialize
-        if (isEnded) {
-          player.destroy();
-          videoModule.querySelector('.video-layer').innerHTML =
-          '<div class="video-placeholder"></div>';
-
-          initializeVideoModule(videoModule);
-        }
-      } } });
-
-
-}
-
-    </script>
-
-  
+<!-- partial -->
+  <script  src="./script.js"></script>
 
 </body>
-
 </html>
- 
