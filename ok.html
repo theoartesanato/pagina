@@ -1,0 +1,114 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.css" />
+
+<style>
+  * { margin: 0; }
+</style>
+
+          <video poster="https://wallpaperaccess.com/full/701579.jpg" class="js-player"
+          >
+            <!-- Video files -->
+            <source
+              src="https://drive.google.com/uc?export=download&amp;id=124N7PBuI1hDVTt2f-Tks9oYA2p8gRae3"
+              type="video/mp4"
+              size="1080"
+            />
+
+<!-- https://drive.google.com/uc?export=download&amp;id=124N7PBuI1hDVTt2f-Tks9oYA2p8gRae3
+https://drive.google.com/file/d/1rX2aT3lOzhI0Y5Q6szkHo6PMhtT9OomR/view?usp=sharing
+
+https://drive.google.com/file/d/124N7PBuI1hDVTt2f-Tks9oYA2p8gRae3/view?usp=sharing
+
+https://drive.google.com/file/d/11eubl4uTiXe1IeICGAeNO_ugTeRt1fJL/view?usp=sharing
+-->
+
+<!--
+            
+            <source
+              src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-720p.mp4"
+              type="video/mp4"
+              size="720"
+            />
+            <source
+              src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-1080p.mp4"
+              type="video/mp4"
+              size="1080"
+            /-->
+
+            <!-- Caption files -->
+            <track
+              kind="captions"
+              label="English"
+              srclang="en"
+              src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.en.vtt"
+              default
+            />
+            <track
+              kind="captions"
+              label="Français"
+              srclang="fr"
+              src="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-HD.fr.vtt"
+            />
+
+            <!-- Fallback for browsers that don't support the <video> element -->
+            <a href="https://cdn.plyr.io/static/demo/View_From_A_Blue_Moon_Trailer-576p.mp4" download>Download</a>
+          </video>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/plyr/3.6.2/plyr.min.js" crossorigin="anonymous"></script>
+
+<script>
+          document.addEventListener('DOMContentLoaded', () => {
+          // Controls (as seen below) works in such a way that as soon as you explicitly define (add) one control
+          // to the settings, ALL default controls are removed and you have to add them back in by defining those below.
+          // For example, let's say you just simply wanted to add 'restart' to the control bar in addition to the default.
+          // Once you specify *just* the 'restart' property below, ALL of the controls (progress bar, play, speed, etc) will be removed,
+          // meaning that you MUST specify 'play', 'progress', 'speed' and the other default controls to see them again.
+             const controls = [
+              'play-large', // The large play button in the center
+              'restart', // Restart playback
+              'rewind', // Rewind by the seek time (default 10 seconds)
+              'play', // Play/pause playback
+              'fast-forward', // Fast forward by the seek time (default 10 seconds)
+              'progress', // The progress bar and scrubber for playback and buffering
+              'current-time', // The current time of playback
+              'duration', // The full duration of the media
+              'mute', // Toggle mute
+              'volume', // Volume control
+              'captions', // Toggle captions
+              'settings', // Settings menu
+              'pip', // Picture-in-picture (currently Safari only)
+              'airplay', // Airplay (currently Safari only)
+              'download', // Show a download button with a link to either the current source or a custom URL you specify in your options
+              'fullscreen' // Toggle fullscreen
+          ];
+          const player = Plyr.setup('.js-player', { controls });
+      });
+  </script>
+
+<style>
+.plyr--full-ui input[type=range] {
+color: #568af5;
+}
+
+.plyr__control--overlaid {
+background: #568af5;
+}
+
+.plyr--video .plyr__control.plyr__tab-focus,
+.plyr--video .plyr__control:hover,
+.plyr--video .plyr__control[aria-expanded=true] {
+background: #568af5;
+}
+
+.plyr__control.plyr__tab-focus {
+box-shadow: 0 0 0 5px rgba(151, 26, 35, .5);
+}
+
+.plyr__menu__container .plyr__control[role=menuitemradio][aria-checked=true]::before {
+background: #568af5;
+}
+.plyr--audio .plyr__control.plyr__tab-focus,
+.plyr--audio .plyr__control:hover,
+.plyr--audio .plyr__control[aria-expanded=true] {
+background: #568af5;
+}
+</style>
