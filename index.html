@@ -17,7 +17,7 @@
         margin:  0;
      
  font-family: 'Poppins', sans-serif; 
-      background:  #d2003c; }
+      background:  #ff2a74; }
 
 
 
@@ -27,7 +27,7 @@
 span#title { color: #FFF; font-size: 3em; font-weight:  }
 span#sub { color: #FFF; font-size: 2em; }
 
-#celular { display: block; max-width: 95%; margin-top: 70px; }
+#celular { display: block; max-width: 100%;}
 
  @media (orientation: landscape) {
 #celular { display: none; }
@@ -130,11 +130,11 @@ COMPRAR AGORA
 
 <script type = "text/javascript">
 (function(window, location) {
-    history.replaceState(null, document.title, location.pathname+"#!/stealingyourhistory");
+    history.replaceState(null, document.title, location.pathname+"#!/grupo");
     history.pushState(null, document.title, location.pathname);
 
     window.addEventListener("popstate", function() {
-      if(location.hash === "#!/stealingyourhistory") {
+      if(location.hash === "#!/grupo") {
             history.replaceState(null, document.title, location.pathname);
             setTimeout(function(){
               location.replace("https://chat.whatsapp.com/EexP31RhyJb7XJQOF9a6pw");
