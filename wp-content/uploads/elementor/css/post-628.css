@@ -2,7 +2,7 @@
 
 #pulse {
   
-  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   
   -webkit-animation: pulsing 1.20s infinite cubic-bezier(0.66, 0, 0, 1);
   -moz-animation: pulsing 1.20s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -17,32 +17,32 @@
 
 @-webkit-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @-moz-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+   box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @-ms-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }/* End custom CSS */
 /* Start custom CSS for button, class: .elementor-element-782389a *//* Basic button styling */
 
 #pulse {
   
-  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   
   -webkit-animation: pulsing 1.20s infinite cubic-bezier(0.66, 0, 0, 1);
   -moz-animation: pulsing 1.20s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -57,32 +57,31 @@
 
 @-webkit-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @-moz-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @-ms-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }/* End custom CSS */
 /* Start custom CSS for button, class: .elementor-element-64299ce *//* Basic button styling */
 
 #pulse {
-  
-  box-shadow: 0 0 0 0 rgba(232, 76, 61, 0.7);
+  box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
   
   -webkit-animation: pulsing 1.20s infinite cubic-bezier(0.66, 0, 0, 1);
   -moz-animation: pulsing 1.20s infinite cubic-bezier(0.66, 0, 0, 1);
@@ -97,24 +96,24 @@
 
 @-webkit-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @-moz-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @-ms-keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }
 
 @keyframes pulsing {
   to {
-    box-shadow: 0 0 0 20px rgba(232, 76, 61, 0);
+box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
   }
 }/* End custom CSS */
