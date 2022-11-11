@@ -1,3 +1,24 @@
+<!-- <button onclick="myFunction()">Try it</button> -->
+
+ <div id="dive" style="width:100%; height: 100%; display: none; position: absolute;  z-index: 100000;">
+ <iframe style="width:100%;height: 2000px;border:none;" scrolling="no" src="https://checkout.theoartes.com/checkout/636d3f448e30a81f49be8bd9"></iframe>
+</div>
+
+ <script>
+function myFunction() {
+  var x = document.getElementById("dive");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -291,9 +312,9 @@ a{
         <div class="elementor-element elementor-element-4fb421a elementor-align-center delay elementor-widget elementor-widget-button" data-id="4fb421a" data-element_type="widget" data-widget_type="button.default">
         <div class="elementor-widget-container">
           <div class="elementor-button-wrapper">
-      <a data-bs-toggle="modal" data-bs-target="#largeModal" style="color:  #fff;" class="elementor-button-link elementor-button elementor-size-lg" role="button" id="pisca">
+      <a style="color:  #fff;" class="elementor-button-link elementor-button elementor-size-lg" role="button" id="pisca">
             <span class="elementor-button-content-wrapper">
-            <span class="elementor-button-text" >SIM, QUERO COMEÇAR AGORA!</span>
+           <button onclick="myFunction()"> <span class="elementor-button-text" >SIM, QUERO COMEÇAR AGORA!</span> </button> 
 
             
 
